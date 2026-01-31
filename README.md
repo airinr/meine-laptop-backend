@@ -16,7 +16,7 @@ Input:
 Tidak memerlukan input.
 
 URL:
-http://localhost/BackendTubesLaragon/laptops.php
+http://'ngrok'/BackendTubesLaragon/laptops.php
 
 Output:
 Berupa data seluruh laptop dalam format JSON.
