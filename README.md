@@ -22,7 +22,8 @@ Output:
 Berupa data seluruh laptop dalam format JSON.
 
 Contoh Output:
-''' [{
+```
+[{
     "id_laptop": 1,
     "kode_laptop": "LPT-0001",
     "brand": "ASUS",
@@ -30,7 +31,8 @@ Contoh Output:
     "spesifikasi": "Intel i5, RAM 8GB",
     "harga_sewa": 100000,
     "status": "available"
-}] '''
+}] 
+```
 
 **1.2 POST – Menambahkan Data Laptop**
 
@@ -38,6 +40,7 @@ Endpoint:
 POST /BackendTubesLaragon/laptops.php
 
 Input (JSON):
+```
 {
     "kode_laptop": "LPT-0100",
     "brand": "ASUS",
@@ -46,11 +49,14 @@ Input (JSON):
     "harga_sewa": 100000,
     "status": "available"
 }
+```
 
 Output:
+```
 {
 "message": "Laptop berhasil ditambahkan"
 }
+```
 
 **1.3 PUT – Mengubah Data Laptop**
 
@@ -58,6 +64,7 @@ Endpoint:
 PUT /BackendTubesLaragon/laptops.php
 
 Input (JSON):
+```
 {
 "id_laptop": 1,
 "brand": "ASUS",
@@ -66,11 +73,14 @@ Input (JSON):
 "harga_sewa": 120000,
 "status": "available"
 }
+```
 
 Output:
+```
 {
 "message": "Laptop berhasil diupdate"
 }
+```
 
 **1.4 DELETE – Menghapus Data Laptop**
 
@@ -78,12 +88,16 @@ Endpoint:
 DELETE /BackendTubesLaragon/laptops.php
 
 Input (JSON):
+```
 { "id_laptop": 1 }
+```
 
 Output:
+```
 {
 "message": "Laptop berhasil dihapus"
 }
+```
 
 ==================================================
 
@@ -101,6 +115,7 @@ Input:
 Tidak memerlukan input.
 
 Output:
+```
 [{
 "id_penyewa": 1,
 "nama": "Andi Pratama",
@@ -108,6 +123,7 @@ Output:
 "email": "andi@mail.com",
 "alamat": "Bandung"
 }]
+```
 
 **2.2 POST – Menambahkan Data Penyewa**
 
@@ -115,17 +131,21 @@ Endpoint:
 POST /BackendTubesLaragon/penyewas.php
 
 Input (JSON):
+```
 {
 "nama": "Budi Santoso",
 "telp": "0812000999",
 "email": "budi@mail.com",
 "alamat": "Bandung"
 }
+```
 
 Output:
+```
 {
 "message": "Penyewa berhasil ditambahkan"
 }
+```
 
 **2.3 PUT – Mengubah Data Penyewa**
 
@@ -133,6 +153,7 @@ Endpoint:
 PUT /BackendTubesLaragon/penyewas.php
 
 Input (JSON):
+```
 {
 "id_penyewa": 1,
 "nama": "Budi Santoso",
@@ -140,11 +161,14 @@ Input (JSON):
 "email": "budi_updated@mail.com",
 "alamat": "Bandung"
 }
+```
 
 Output:
+```
 {
 "message": "Penyewa berhasil diupdate"
 }
+```
 
 **2.4 DELETE – Menghapus Data Penyewa**
 
@@ -152,10 +176,14 @@ Endpoint:
 DELETE /BackendTubesLaragon/penyewas.php
 
 Input (JSON):
+```
 { "id_penyewa": 1 }
+```
 
 Output:
+```
 { "message": "Penyewa berhasil dihapus" }
+```
 
 ==================================================
 
@@ -176,6 +204,7 @@ Output:
 Data penyewaan hasil relasi (JOIN) antara tabel penyewa dan laptop.
 
 Contoh Output:
+```
 [{
 "id_sewa": 1,
 "kode_sewa": "SEWA-2025-001",
@@ -189,6 +218,8 @@ Contoh Output:
 "harga": 450000,
 "denda": 0
 }]
+```
+
 
 **3.2 POST – Menambahkan Data Penyewaan**
 
@@ -196,6 +227,7 @@ Endpoint:
 POST /BackendTubesLaragon/penyewaans.php
 
 Input (JSON):
+```
 {
 "kode_sewa": "SEWA-2025-010",
 "id_penyewa": 1,
@@ -205,11 +237,14 @@ Input (JSON):
 "status": "ongoing",
 "harga": 500000
 }
+```
 
 Output:
+```
 {
 "message": "Penyewaan berhasil ditambahkan"
 }
+```
 
 **3.3 PUT – Mengubah Status Penyewaan**
 
@@ -217,17 +252,21 @@ Endpoint:
 PUT /BackendTubesLaragon/penyewaans.php
 
 Input (JSON):
+```
 {
 "id_sewa": 1,
 "tgl_dikembalikan": "2025-10-06",
 "status": "selesai",
 "denda": 50000
 }
+```
 
 Output:
+```
 {
 "message": "Penyewaan berhasil diupdate"
 }
+```
 
 **3.4 DELETE – Menghapus Data Penyewaan**
 
@@ -235,14 +274,18 @@ Endpoint:
 DELETE /BackendTubesLaragon/penyewaans.php
 
 Input (JSON):
+```
 {
 "id_sewa": 1
 }
+```
 
 Output:
+```
 {
 "message": "Penyewaan berhasil dihapus"
 }
+```
 
 ==================================================
 
