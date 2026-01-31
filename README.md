@@ -22,7 +22,7 @@ Output:
 Berupa data seluruh laptop dalam format JSON.
 
 Contoh Output:
-[{
+''' [{
     "id_laptop": 1,
     "kode_laptop": "LPT-0001",
     "brand": "ASUS",
@@ -30,7 +30,7 @@ Contoh Output:
     "spesifikasi": "Intel i5, RAM 8GB",
     "harga_sewa": 100000,
     "status": "available"
-}]
+}] '''
 
 **1.2 POST – Menambahkan Data Laptop**
 
